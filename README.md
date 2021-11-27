@@ -1,19 +1,23 @@
 ---
-page_type: sample
+page_type: development purposes
 languages:
 - javascript
 - html
+- css
 products:
 - ms-graph
 - azure-active-directory
 - microsoft-identity-platform
-description: "A simple JavaScript Single-Page Application using the Auth Code flow w/ PKCE"
+- azure-app-service
+- web-app by azure
+- azure-maps
+description: "Disaster Delineation API Tool for public use. The web app uses the EONET APv3 by NASA recorded data and visualizes the data based on the real time disaster events occuring from around the world."
 urlFragment: "ms-identity-javascript-v2"
 ---
 
-# Vanilla JavaScript Single-page Application secured with MSAL.js
+# Disaster Delineation API
 
-A simple vanilla JavaScript single-page application which demonstrates how to configure [MSAL.JS 2.x](https://www.npmjs.com/package/@azure/msal-browser) to login, logout, and acquire an access token for a protected resource such as the **Microsoft Graph API**. This version of the MSAL.js library uses the [authorization code flow with PKCE](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+Disaster Delineation API Tool as a web app uses the EONET APv3 by NASA recorded data and visualizes the data based on the real time disaster events occuring from around the world. The web app has a feature to identify the users by configuring [MSAL.JS 2.x](https://www.npmjs.com/package/@azure/msal-browser) to login, logout, and acquire an access token for a protected resource such as the **Microsoft Graph API**. This version of the MSAL.js library uses the [authorization code flow with PKCE](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
 **Note:** A quickstart guide covering this sample can be found [here](https://docs.microsoft.com/azure/active-directory/develop/quickstart-v2-javascript-auth-code).
 
@@ -23,14 +27,16 @@ A simple vanilla JavaScript single-page application which demonstrates how to co
 
 | File/folder       | Description                                |
 |-------------------|--------------------------------------------|
-| `app`             | Contains sample source files               |
+| `app`             | Containssource code files                  |
 | `authPopup.js`    | Main authentication logic resides here (using Popup flow).            |
 | `authRedirect.js` | Use this instead of `authPopup.js` for authentication with redirect flow.   |
-| `authConfig.js`   | Contains configuration parameters for the sample.      |
+| `authConfig.js`   | Contains configuration parameters.      |
 | `graph.js`        | Provides a helper function for calling MS Graph API.   |
 | `graphConfig.js`  | Contains API endpoints for MS Graph.       |
 | `ui.js`           | Contains UI logic.                         |
-| `index.html`      |  Contains the UI of the sample.            |
+| `index.html`      |  Contains the UI and azure maps services modules and css.            |
+| `index.css`      |  Contains the UI designs stylesheets type in css.            |
+| `index.js`      |  Contains the azure maps functionality, operability and fetching API calls and filter the resuls logic resides here.            |
 | `.gitignore`      | Define what to ignore at commit time.      |
 | `package.json`    | Package manifest for npm.                  |
 | `server.js`     | Implements a simple Node server to serve index.html.  |
@@ -38,14 +44,19 @@ A simple vanilla JavaScript single-page application which demonstrates how to co
 ## Prerequisites
 
 [Node](https://nodejs.org/en/) must be installed to run this sample.
+[Ms Azure Account](https://azure.microsoft.com/en-in/free/)
 
-## Setup
+## Setup for authentication and authorisation.
 
 1. [Register a new application](https://docs.microsoft.com/azure/active-directory/develop/scenario-spa-app-registration) in the [Azure Portal](https://portal.azure.com). Ensure that the application is enabled for the [authorization code flow with PKCE](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-auth-code-flow). This will require that you redirect URI configured in the portal is of type `SPA`.
 2. Open the [/app/authConfig.js](./app/authConfig.js) file and provide the required configuration values.
 3. On the command line, navigate to the root of the repository, and run `npm install` to install the project dependencies via npm.
 
-## Running the sample
+## Setup for MS Azure Maps Services
+
+Check out the reference docs[here](https://docs.microsoft.com/en-us/azure/azure-maps/quick-demo-map-app)
+
+## Running the code
 
 1. Configure authentication and authorization parameters:
    1. Open `authConfig.js`
@@ -72,18 +83,8 @@ This sample demonstrates the following MSAL workflows:
 * How to acquire an access token.
 * How to make an API call with the access token.
 
-## Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
+## Conclusion
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-# disaster_delineation_azure
 # ms_azure_disaster_delineation
