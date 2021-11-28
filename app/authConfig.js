@@ -7,7 +7,7 @@ const msalConfig = {
     auth: {
         clientId: "110e2782-9f2c-4181-a398-5d9fd7aa4faf",
         authority: "https://login.microsoftonline.com/consumers",
-        redirectUri: "https://127.0.0.1/disasterdelineation",
+        redirectUri: "https://disasterdelineation.azurewebsites.net/auth",
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
