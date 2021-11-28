@@ -5,7 +5,7 @@
  */
 const msalConfig = {
     auth: {
-        clientId: "c2340e71-5801-456b-b8fe-98be87a7969f",
+        clientId: "110e2782-9f2c-4181-a398-5d9fd7aa4faf",
         authority: "https://login.microsoftonline.com/consumers",
         redirectUri: "https://127.0.0.1/disasterdelineation",
     },
