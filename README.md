@@ -54,7 +54,7 @@ Disaster Delineation API Tool as a web app uses the EONET APv3 by NASA recorded 
 
 ## Setup for MS Azure Maps Services
 
-Check out the reference docs[here](https://docs.microsoft.com/en-us/azure/azure-maps/quick-demo-map-app)
+Check out the reference docs [here](https://docs.microsoft.com/en-us/azure/azure-maps/quick-demo-map-app)
 
 ## Running the code
 
