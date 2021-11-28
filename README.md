@@ -14,7 +14,7 @@ description: "Disaster Delineation API Tool for public use. The web app uses the
 urlFragment: "ms-identity-javascript-v2"
 ---
 
-# Disaster Delineation API
+# Disaster Delineation API Tool
 
 Disaster Delineation API Tool as a web app uses the EONET APv3 by NASA recorded data and visualizes the data based on the real time disaster events occuring from around the world. The web app has a feature to identify the users by configuring [MSAL.JS 2.x](https://www.npmjs.com/package/@azure/msal-browser) to login, logout, and acquire an access token for a protected resource such as the **Microsoft Graph API**. This version of the MSAL.js library uses the [authorization code flow with PKCE](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
