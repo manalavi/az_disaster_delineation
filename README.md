@@ -5,7 +5,6 @@ languages:
 - html
 - css
 products:
-- ms-graph
 - azure-active-directory
 - microsoft-identity-platform
 - azure-app-service
@@ -27,23 +26,14 @@ Disaster Delineation API Tool as a web app uses the EONET APv3 by NASA recorded 
 
 | File/folder       | Description                                |
 |-------------------|--------------------------------------------|
-| `app`             | Containssource code files                  |
-| `authPopup.js`    | Main authentication logic resides here (using Popup flow).            |
-| `authRedirect.js` | Use this instead of `authPopup.js` for authentication with redirect flow.   |
-| `authConfig.js`   | Contains configuration parameters.      |
-| `graph.js`        | Provides a helper function for calling MS Graph API.   |
-| `graphConfig.js`  | Contains API endpoints for MS Graph.       |
-| `ui.js`           | Contains UI logic.                         |
+| `src`             | Contains source code files                  |
 | `index.html`      |  Contains the UI and azure maps services modules and css.            |
 | `index.css`      |  Contains the UI designs stylesheets type in css.            |
 | `index.js`      |  Contains the azure maps functionality, operability and fetching API calls and filter the resuls logic resides here.            |
 | `.gitignore`      | Define what to ignore at commit time.      |
-| `package.json`    | Package manifest for npm.                  |
-| `server.js`     | Implements a simple Node server to serve index.html.  |
 
 ## Prerequisites
 
-[Node](https://nodejs.org/en/) must be installed to run this sample.
 [Ms Azure Account](https://azure.microsoft.com/en-in/free/)
 
 ## Setup for authentication and authorisation.
@@ -58,6 +48,7 @@ Check out the reference docs [here](https://docs.microsoft.com/en-us/azure/azure
 
 ## Running the code
 
+### For adding authentication follow the below steps:
 1. Configure authentication and authorization parameters:
    1. Open `authConfig.js`
    2. Replace the string `"Enter_the_Application_Id_Here"` with your app/client ID on AAD Portal.
@@ -69,6 +60,10 @@ Check out the reference docs [here](https://docs.microsoft.com/en-us/azure/azure
    3. Replace the string `"Enter_the_Graph_Endpoint_Herev1.0/me/messages"` with `"https://graph.microsoft.com/v1.0/me/messages"`.
 3. To start the sample application, run `npm start`.
 4. Finally, open a browser and navigate to [http://localhost:3000](http://localhost:3000).
+
+### Static Web app - Disaster Delineation API Tool 
+1. Just deploy the static web app to the azure app service by creating the azure static web app.
+2. Locally, use the popular VSCode live-server for interacting with the app.
 
 > How did we do? Consider [sharing your experience with us](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR73pcsbpbxNJuZCMKN0lURpUNzlSS1hSVFBRU0pGNlBDRjY4UkRRNjBFMyQlQCN0PWcu).
 
