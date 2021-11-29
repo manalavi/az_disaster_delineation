@@ -42,7 +42,7 @@ const searchEvents = async (searchText) =>{
   if (searchText.length === 0){
     matches = [];
     matchlist.innerHTML = "";
-    document.getElementById("infoPanel").innerHTML = "";
+    document.getElementById("infoPanel").innerHTML = "Event Details";
   }
 
   outputHtml(matches);
