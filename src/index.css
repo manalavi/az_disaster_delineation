@@ -224,27 +224,30 @@ table,td,tr{
 
  /* Adjust the layout of the page when the screen width is fewer than 700 pixels. */
  @media screen and (max-width: 700px) {
-     .searchPanel {
+     .searchPanel {       
          width: 100vw;
+         margin-top:20rem;
      }
 
      #matchlist {
-         top: 385px;
+         top: 545px;
          width: 100%;
          height: calc(100vh - 385px);
      }
 
-     #myMap {
-         margin-top:5.5em;
+     #myMap {         
          width: 100vw;
          height: 250px;
-         top: 135px;
+         top: 150px;
          left: 0px;
      }
 
      #myLocationBtn {
          top: 220px;
      }
+     #infoPanel{
+       top:17rem;
+   }
  }
 
  .mapCenterIcon {
