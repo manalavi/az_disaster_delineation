@@ -72,6 +72,17 @@ html, body {
   width: 350px;
 }
 
+#infoPanel {
+  position:absolute;
+  top:350px;
+  right:15px;
+  border-radius:5px;
+  padding:5px;
+  background-color:white;
+  max-width:300px;
+  overflow:hidden;
+}
+
 table,td,tr{
    border: 1px solid #dddddd;
 }
@@ -224,6 +235,7 @@ table,td,tr{
      }
 
      #myMap {
+         margin-top:5.5em;
          width: 100vw;
          height: 250px;
          top: 135px;
